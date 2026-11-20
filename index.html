@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore countries around the world.">
+    <title>Where in the World?</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <a href="index.html" class="logo">Where in the world?</a>
+
+            <button class="theme-toggle" id="themeToggle">
+                <span id="themeIcon">☾</span>
+                <span id="themeText">Dark Mode</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main -->
+    <main class="container">
+
+        <!-- Home Page -->
+        <section id="homePage">
+
+            <!-- Search and Filter -->
+            <div class="controls">
+
+                <div class="search-box">
+                    <span class="search-icon">⌕</span>
+                    <input
+                        type="text"
+                        id="searchInput"
+                        placeholder="Search for a country..."
+                        aria-label="Search for a country">
+                </div>
+
+                <select id="regionFilter" aria-label="Filter by region">
+                    <option value="">Filter by Region</option>
+                    <option value="Africa">Africa</option>
+                    <option value="Americas">America</option>
+                    <option value="Asia">Asia</option>
+                    <option value="Europe">Europe</option>
+                    <option value="Oceania">Oceania</option>
+                </select>
+
+            </div>
+
+            <!-- Country Cards -->
+            <div class="countries-grid" id="countriesGrid"></div>
+
+            <p id="loadingMessage" class="message">Loading countries...</p>
+
+        </section>
+
+        <!-- Country Details Page -->
+        <section id="detailPage" hidden>
+
+            <button class="back-button" id="backButton">
+                <span>←</span> Back
+            </button>
+
+            <div id="countryDetails"></div>
+
+        </section>
+
+    </main>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
